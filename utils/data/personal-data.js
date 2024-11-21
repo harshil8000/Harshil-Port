@@ -14,5 +14,5 @@ export const personalData = {
   linkedIn: "https://www.linkedin.com/in/baradharshil/",
   twitter: "https://twitter.com/harshil8000",
   stackOverflow: "https://stackoverflow.com/users/168407688/baradharshil",
-  resume: "https://drive.google.com/file",
+  resume: "https://drive.google.com/file/d/1Foo349YX7BMZSDVUIr_tG08_fpdRPx4y/view?usp=sharing",
 };
