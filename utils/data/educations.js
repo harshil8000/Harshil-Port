@@ -18,3 +18,4 @@ export const educations = [
     institution: "Shree swaminarayn gurukul surat",
   },
 ];
+   
