@@ -1,7 +1,7 @@
 // @flow strict
 import Link from "next/link";
 
-function Navbar() {
+function Navbar() {   
   return (
     <nav className="bg-transparent">
       <div className="flex items-center justify-between py-5">
