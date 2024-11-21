@@ -44,7 +44,7 @@ export default function RootLayout({ children }) {
 
           {/* Favicon */}
           <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-          <link rel="icon" href="/favicon.jpg" type="image/png" />
+          <link rel="icon" href="/favicon.jpg" type="image/jpg" />
   
           {/* Canonical URL to avoid duplicate content */}
           <link rel="canonical" href={process.env.NEXT_PUBLIC_SITE_URL} />
