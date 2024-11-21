@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
           <meta name="twitter:image" content="/path-to-image.jpg" /> {/* Use a valid image URL */}
 
           {/* Favicon */}
-          <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+          <link rel="icon" href="/favicon.jpg" type="image/x-icon" />
           <link rel="icon" href="/favicon.jpg" type="image/jpg" />
   
           {/* Canonical URL to avoid duplicate content */}
