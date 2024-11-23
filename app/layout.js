@@ -28,7 +28,10 @@ export default function RootLayout({ children }) {
 
           {/* Title for Search Engine Results */}
           <title>{metadata.title}</title>
-
+    
+    
+    
+    
           {/* Open Graph (for social media sharing) */}
           <meta property="og:title" content={metadata.title} />
           <meta property="og:description" content={metadata.description} />
