@@ -17,6 +17,8 @@ async function getData() {
     throw new Error('Failed to fetch data')
   }
 
+
+
   const data = await res.json();
 
   const filtered = data.filter((item) => item?.cover_image).sort(() => Math.random() - 0.5);
