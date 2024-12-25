@@ -9,6 +9,7 @@ export function timeConverter(isoTime) {
   const days = Math.floor(hours / 24);
   const months = Math.floor(days / 30);
   const years = Math.floor(months / 12);
+  
 
   if (seconds < 60) {
     return `${seconds} seconds ago`;
