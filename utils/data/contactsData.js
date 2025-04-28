@@ -8,4 +8,5 @@ export const contactsData = {
     twitter: 'https://twitter.com/harshil8000',
     stackOverflow: 'https://stackoverflow.com/users/168407688/baradharshil',
     devUsername: "harshil8000"
+    
 }
