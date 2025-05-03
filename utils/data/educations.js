@@ -1,7 +1,7 @@
 export const educations = [
   {
     id: 1,
-    title: "Bachelor of Technology",
+    title: "Bachelor of Technology in IT",
     duration: "2020 - 2024",
     institution: "Ukatatarsadiya university bardoli",
   },
