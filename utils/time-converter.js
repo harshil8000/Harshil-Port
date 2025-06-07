@@ -2,7 +2,7 @@ export function timeConverter(isoTime) {
   const currentTime = new Date().getTime();
   const pastTime = new Date(isoTime).getTime();
   const timeDifference = currentTime - pastTime;
-
+  
   const seconds = Math.floor(timeDifference / 1000);
   const minutes = Math.floor(seconds / 60);
   const hours = Math.floor(minutes / 60);
