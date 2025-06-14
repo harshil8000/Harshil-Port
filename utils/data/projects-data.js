@@ -7,6 +7,7 @@ import travel from "/public/image/travel.jpg";
 // import aiIntegration from '/public/image/ai-integration.jpg';
 
 export const projectsData = [
+  
   {
     id: 1,
     name: "NFT Web App",
