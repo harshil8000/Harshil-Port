@@ -16,3 +16,4 @@ export const personalData = {
   stackOverflow: "https://stackoverflow.com/users/168407688/baradharshil",
   resume: "https://drive.google.com/file/d/1Foo349YX7BMZSDVUIr_tG08_fpdRPx4y/view?usp=sharing",
 };
+ 
