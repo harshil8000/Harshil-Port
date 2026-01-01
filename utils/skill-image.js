@@ -141,7 +141,7 @@ export const skillsImage = (skill) => {
     case 'go':
       return go;
     case 'java':
-      return java;
+      return java; 
     case 'kotlin':
       return kotlin;
     case 'julia':
