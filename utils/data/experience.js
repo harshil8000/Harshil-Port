@@ -11,7 +11,7 @@ export const experiences = [
     company: "Opash Software",
     duration: "(Jan 2024 - Jun 2024)",
   },
-  { 
+  {
     id: 3,
     title: "Software Engineer Intern",
     company: "Pixer Digital",

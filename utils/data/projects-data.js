@@ -7,7 +7,127 @@ import travel from "/public/image/travel.jpg";
 // import aiIntegration from '/public/image/ai-integration.jpg';
 
 export const projectsData = [
-  
+  {
+    id: 8,
+    name: "AI-Powered Insurance Policy Management System",
+    description:
+      "Developed a comprehensive insurance policy management platform with AI-driven risk assessment and automated underwriting. Integrated machine learning models for claim processing, fraud detection, and personalized policy recommendations. Built with microservices architecture using Python, FastAPI, React, and PostgreSQL. Implemented real-time data processing with Apache Kafka and deployed on AWS with Kubernetes orchestration.",
+    tools: [
+      "Python",
+      "FastAPI",
+      "React",
+      "PostgreSQL",
+      "Apache Kafka",
+      "Kubernetes",
+      "AWS",
+      "TensorFlow",
+      "Docker",
+      "Redis",
+      "Machine Learning",
+      "Microservices"
+    ],
+    role: "Lead AI Developer",
+    code: "",
+    demo: "",
+    image: "insurance-tech",
+  },
+  {
+    id: 9,
+    name: "Fuel Station CRM & Management System",
+    description:
+      "Comprehensive fuel station management system with CRM capabilities, inventory tracking, sales analytics, and customer loyalty programs. Features include real-time fuel pricing, automated inventory management, customer relationship management, and predictive analytics for demand forecasting. Built with React, Node.js, MongoDB, and integrated with IoT sensors for automated fuel monitoring and maintenance alerts.",
+    tools: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express",
+      "Socket.io",
+      "Chart.js",
+      "IoT Integration",
+      "AWS IoT",
+      "Docker",
+      "Redis",
+      "Analytics",
+      "Real-time Processing"
+    ],
+    role: "Full Stack Developer",
+    code: "",
+    demo: "",
+    image: "fuel-station-crm",
+  },
+  {
+    id: 10,
+    name: "AI Healthcare Diagnostic Assistant",
+    description:
+      "Intelligent healthcare diagnostic assistant using computer vision and NLP to analyze medical images and patient symptoms. Integrated with electronic health records (EHR) for comprehensive patient analysis. Features include automated disease detection, treatment recommendations, and medical report generation. Built with Python, TensorFlow, React, and deployed on GCP with HIPAA compliance.",
+    tools: [
+      "Python",
+      "TensorFlow",
+      "Computer Vision",
+      "NLP",
+      "React",
+      "FastAPI",
+      "PostgreSQL",
+      "GCP",
+      "HIPAA Compliance",
+      "Docker",
+      "Kubernetes",
+      "Medical AI"
+    ],
+    role: "AI/ML Engineer",
+    code: "",
+    demo: "",
+    image: "ai-healthcare",
+  },
+  {
+    id: 11,
+    name: "Smart Insurance Claims Processing Platform",
+    description:
+      "Automated insurance claims processing platform using AI and computer vision for document analysis and fraud detection. Processes handwritten forms, receipts, and damage assessments automatically. Features blockchain-based claim verification, real-time status tracking, and automated payout calculations. Built with microservices architecture and deployed on enterprise cloud infrastructure.",
+    tools: [
+      "Python",
+      "Computer Vision",
+      "OpenCV",
+      "Blockchain",
+      "Smart Contracts",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "AWS",
+      "Machine Learning",
+      "OCR",
+      "Document Processing"
+    ],
+    role: "Senior Developer",
+    code: "",
+    demo: "",
+    image: "claims-processing",
+  },
+  {
+    id: 12,
+    name: "AI-Driven Financial Portfolio Manager",
+    description:
+      "Advanced financial portfolio management platform with AI-powered investment recommendations and risk assessment. Features include real-time market analysis, automated rebalancing, tax optimization, and predictive modeling for market trends. Integrated with multiple brokerage APIs and built with modern fintech security standards.",
+    tools: [
+      "Python",
+      "TensorFlow",
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Redis",
+      "Fintech APIs",
+      "Real-time Data",
+      "Security",
+      "Machine Learning",
+      "Financial Modeling",
+      "Risk Assessment"
+    ],
+    role: "Fintech Developer",
+    code: "",
+    demo: "",
+    image: "portfolio-manager",
+  },
+
   {
     id: 1,
     name: "NFT Web App",

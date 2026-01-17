@@ -1,69 +1,120 @@
 // @flow strict
 
 import * as React from 'react';
+import { FiExternalLink, FiCode, FiUser } from 'react-icons/fi';
 
 function ProjectCard({ project }) {
-
   return (
-    <div className="from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37] w-full">
-      <div className="flex flex-row">
-        <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
-        <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
-      </div>
-      <div className="px-4 lg:px-8 py-3 lg:py-5 relative">
-        <div className="flex flex-row space-x-1 lg:space-x-2 absolute top-1/2 -translate-y-1/2">
-          <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-red-400"></div>
-          <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-orange-400"></div>
-          <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-green-200"></div>
-        </div>
-        <p className="text-center ml-3 text-[#16f2b3] text-base lg:text-xl">
-          {project.name}
-        </p>
-      </div>
-      <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
-        <code className="font-mono text-xs md:text-sm lg:text-base">
-          <div className="blink">
-            <span className="mr-2 text-pink-500">const</span>
-            <span className="mr-2 text-white">project</span>
-            <span className="mr-2 text-pink-500">=</span>
-            <span className="text-gray-400">{'{'}</span>
-          </div>
-          <div>
-            <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
-            <span className="text-gray-400">{`'`}</span>
-            <span className="text-amber-300">{project.name}</span>
-            <span className="text-gray-400">{`',`}</span>
+    <div className="group relative w-full">
+      {/* Card Container */}
+      <div className="card card-hover transform transition-all duration-500 hover:scale-105 hover:-translate-y-2 overflow-hidden">
+        {/* Gradient Border */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-cyan-500/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+        {/* Card Content */}
+        <div className="relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-xl border border-gray-700/50 overflow-hidden">
+          {/* Header */}
+          <div className="p-6 border-b border-gray-700/50">
+            <div className="flex items-start justify-between mb-4">
+              <div className="flex items-center space-x-3">
+                <div className="p-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg">
+                  <FiCode className="w-5 h-5 text-blue-400" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
+                    {project.name}
+                  </h3>
+                  <div className="flex items-center space-x-2 mt-1">
+                    <FiUser className="w-4 h-4 text-gray-400" />
+                    <span className="text-sm text-gray-400">{project.role}</span>
+                  </div>
+                </div>
+              </div>
+              <div className="flex space-x-2">
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 text-gray-400 hover:text-blue-400 hover:bg-blue-500/10 rounded-lg transition-all duration-300"
+                    aria-label="View demo"
+                  >
+                    <FiExternalLink className="w-4 h-4" />
+                  </a>
+                )}
+                {project.code && (
+                  <a
+                    href={project.code}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 text-gray-400 hover:text-purple-400 hover:bg-purple-500/10 rounded-lg transition-all duration-300"
+                    aria-label="View code"
+                  >
+                    <FiCode className="w-4 h-4" />
+                  </a>
+                )}
+              </div>
+            </div>
+
+            {/* Description */}
+            <p className="text-gray-300 text-sm leading-relaxed line-clamp-3">
+              {project.description}
+            </p>
           </div>
 
-          <div className="ml-4 lg:ml-8 mr-2">
-            <span className=" text-white">tools:</span>
-            <span className="text-gray-400">{` ['`}</span>
-            {
-              project.tools.map((tag, i) => (
-                <React.Fragment key={i}>
-                  <span className="text-amber-300">{tag}</span>
-                  {
-                    project.tools.length - 1 !== i &&
-                    <span className="text-gray-400">{`', '`}</span>
-                  }
-                </React.Fragment>
-              ))
-            }
-            <span className="text-gray-400">{"],"}</span>
+          {/* Technologies */}
+          <div className="p-6">
+            <div className="flex flex-wrap gap-2 mb-4">
+              {project.tools.slice(0, 4).map((tech, index) => (
+                <span
+                  key={index}
+                  className="px-3 py-1 bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-300 text-xs font-medium rounded-full border border-blue-500/20 hover:border-blue-400/40 transition-colors duration-300"
+                >
+                  {tech}
+                </span>
+              ))}
+              {project.tools.length > 4 && (
+                <span className="px-3 py-1 bg-gray-700/50 text-gray-400 text-xs font-medium rounded-full">
+                  +{project.tools.length - 4} more
+                </span>
+              )}
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex space-x-3">
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 hover:shadow-glow-primary"
+                >
+                  <FiExternalLink className="w-4 h-4 mr-2" />
+                  View Demo
+                </a>
+              )}
+              {project.code && (
+                <a
+                  href={project.code}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center px-4 py-2 border-2 border-gray-600 text-gray-300 text-sm font-medium rounded-lg hover:border-blue-500 hover:text-blue-400 hover:bg-blue-500/10 transition-all duration-300"
+                >
+                  <FiCode className="w-4 h-4 mr-2" />
+                  View Code
+                </a>
+              )}
+            </div>
           </div>
-          <div>
-            <span className="ml-4 lg:ml-8 mr-2 text-white">myRole:</span>
-            <span className="text-orange-400">{project.role}</span>
-            <span className="text-gray-400">,</span>
-          </div>
-          <div className="ml-4 lg:ml-8 mr-2">
-            <span className="text-white">Description:</span>
-            <span className="text-cyan-400">{' ' + project.description}</span>
-            <span className="text-gray-400">,</span>
-          </div>
-          <div><span className="text-gray-400">{`};`}</span></div>
-        </code>
+
+          {/* Hover Effect Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-blue-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+        </div>
       </div>
+
+      {/* Floating Elements */}
+      <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full opacity-0 group-hover:opacity-100 animate-ping transition-opacity duration-500"></div>
+      <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-500" style={{ animationDelay: '0.5s' }}></div>
     </div>
   );
 };
